@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>music for life</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="flex-box">
+                <div class="left">
+                    <!-- play -->
+                    <div class="play_infor">
+                        <h2 class="infor_name_song">momo</h2>
+                        <p class="infor_name_singer">ahihi</p>
+                        <div class="infor_img"></div>
+                    </div>
+                    <!-- control -->
+                    <div class="control flex-center">
+                        <span class="flex-center btn_repeat control_item"
+                            ><i class="fas fa-undo-alt"></i
+                        ></span>
+                        <span class="backBtn control_item"
+                            ><i class="fas fa-fast-backward"></i
+                        ></span>
+                        <span class="play_pause flex-center control_item"
+                            ><i class="fas fa-play playing"></i
+                        ></span>
+                        <span class="control_item">
+                            <i class="fas fa-fast-forward nextBtn"></i
+                        ></span>
+                        <span class="flex-center btn_Random control_item"
+                            ><i class="fas fa-random"></i
+                        ></span>
+                    </div>
+                    <!-- audio -->
+                    <div class="flex-center control_progress">
+                        <span class="time_a time_main">--:--</span>
+                        <input
+                            id="progress"
+                            class="progress"
+                            type="range"
+                            value="0"
+                            step="1"
+                            min="0"
+                            max="100"
+                        />
+
+                        <span class="time_b time_main">--:--</span>
+                    </div>
+                    <div class="control_volume">
+                        <input
+                            id="progress_volume"
+                            class="progress_volume"
+                            type="range"
+                            value="100"
+                            step="1"
+                            min="0"
+                            max="100"
+                        />
+                        <progress
+                            class="progress_volume2"
+                            value="100"
+                            min="0"
+                            max="100"
+                        ></progress>
+                    </div>
+                    <audio id="audio" src="./css/mp3/2_phut_hon.mp3"></audio>
+                </div>
+                <div class="center">
+                    <!--  -->
+                </div>
+                <div class="right">
+                    <p class="lyrics"></p>
+                </div>
+            </div>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,283 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Cabin", sans-serif;
+    background-image: url(./img/hinh_nen_galaxy.jpeg);
+}
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7.5vh;
+    height: 85vh;
+    /* background-color: background-color: #D9AFD9; */
+    background-image: linear-gradient(
+        61deg,
+        #d9afd9 0%,
+        #97d9e1 50%,
+        #ffc4c4 100%
+    );
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right,
+.center,
+.left {
+    width: 32%;
+    border-radius: 20px;
+    height: calc(85vh - 40px);
+}
+.left {
+    background-color: rgba(217, 175, 217, 0.5);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.left .infor_name_singer {
+    /* margin-top: 20px; */
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.left .infor_name_song {
+    margin-top: 30px;
+    font-size: 34px;
+}
+.play_infor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infor_img {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: none;
+    animation-play-state: running;
+    background-image: url(./img/demo.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* .infor_img {
+    position: relative;
+} */
+/* .infor_img div {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(-100%);
+    transform: translateY(-100%);
+} */
+.control {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 90px;
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.control span {
+    font-size: 24px;
+    color: rgb(54, 15, 15);
+}
+span.play_pause {
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #c21f1f;
+}
+/* .control span:hover {
+    color: rgba(217, 175, 217);
+} */
+.control_click {
+    transform: scale(0.9);
+    /* color: red; */
+}
+.control_progress {
+    margin-top: 25px;
+}
+.control .active {
+    color: #c21f1f;
+}
+.control_volume {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.progress_volume2 {
+    width: 50%;
+    -webkit-appearance: none;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+}
+.progress_volume2::-webkit-progress-bar {
+    background-color: #e6dded;
+}
+.progress_volume2::-webkit-progress-value {
+    background-color: #c21e20;
+}
+.progress_volume {
+    position: absolute;
+    -webkit-appearance: none;
+    background-color: transparent;
+    width: 50%;
+    z-index: 2;
+}
+.progress_volume::-webkit-slider-thumb {
+    /* color: #c21f1f; */
+    -webkit-appearance: none;
+    background-color: #3e3641;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #be8261;
+}
+
+.progress {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #ef490a;
+    background-image: linear-gradient(
+        315deg,
+        #ef490a 0%,
+        #7a5792 50%,
+        #40101d 100%
+    );
+
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #b56d26;
+    background-color: #000;
+
+    cursor: pointer;
+}
+.control_progress {
+    /* justify-content: space-between; */
+}
+.progress {
+}
+.time_main {
+    width: 30px;
+    font-size: 12px;
+    font-style: bold;
+}
+.time_b {
+    margin-left: 10px;
+}
+.time_a {
+    margin-right: 10px;
+    text-align: right;
+}
+/* .progress::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+    cursor: pointer;
+} */
+
+.center {
+    background-color: rgba(151, 217, 225, 0.5);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    overflow: auto;
+}
+.song_item {
+    width: 90%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 80px;
+    border-radius: 10px;
+    margin: 15px auto 0 auto;
+    padding: 7.5px;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.song_pic {
+    height: 65px;
+    width: 65px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.song_info {
+    margin-left: 20px;
+    /* margin-right: 20px; */
+    /* background-color: violet; */
+}
+.song_name {
+    font-size: 20px;
+    /* white-space: nowrap; */
+}
+.song_singer {
+    font-size: 16px;
+    font-style: italic;
+}
+.center .active2 {
+    background-color: #1d0750;
+    /* border: 2px solid #714b78; */
+    color: #fff;
+}
+.right {
+    background-color: rgba(255, 196, 196, 0.5);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 20px;
+}
+.right .lyrics {
+    overflow: scroll;
+    height: 100%;
+    font-size: 20px;
+}
+
+@keyframes spinCricle {
+    to {
+        transform: rotate(360deg);
+    }
+}
